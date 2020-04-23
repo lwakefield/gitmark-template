@@ -58,7 +58,7 @@ for (const [ _date, bookmarks ] of bookmarksGroupedByDayEntries) {
     const date = new Date(_date);
     const year = date.getFullYear();
     const month = date.getMonth().toString().padStart(2, '0');
-    const day = date.getDay().toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
     readme += `\n## ${year}-${month}-${day}\n`;
     for (const bookmark of bookmarks) {
         readme += `- [${bookmark.title || bookmark.url}](${bookmark.url})`;
