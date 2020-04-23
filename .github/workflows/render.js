@@ -70,7 +70,7 @@ for (const [ _date, bookmarks ] of bookmarksGroupedByDayEntries) {
 fs.writeFileSync('readme.md', readme);
 
 cp.execSync('git config --local user.name $GITHUB_ACTOR')
-cp.execSync('git config --local user.email $GITHUB_ACTOR@example.com')
+// cp.execSync('git config --local user.email $GITHUB_ACTOR@example.com')
 cp.execSync(`git add readme.md`);
 cp.execSync(`git commit -m "Rendered readme.md"`);
 // cp.execSync(`git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git`);
