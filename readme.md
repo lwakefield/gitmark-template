@@ -1,6 +1,6 @@
 # Bookmarks
 
-## 2020-03-04
+## 2020-03-23
 - [https://example.com](https://example.com)
 - [https://example.com/foo](https://example.com/foo)
 - [tabs.query() - Mozilla | MDN](https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
@@ -11,6 +11,6 @@
 - [lwakefield/bookmarks](https://github.com/lwakefield/bookmarks)
 - [gitmark.lwakefield.now.sh/](https://gitmark.lwakefield.now.sh/about)
 
-## 2020-03-03
+## 2020-03-22
 - [Added "https://github.com/lwakefield/bookmarks" · lwakefield/bookmarks@6083bca](https://github.com/lwakefield/bookmarks/commit/6083bcae090441f6723e1b6d22fd4c47e4f6a416)
 - [Toolbox - Extension / Gitmarks](about:devtools-toolbox?type=extension&id=cbb52590cd4e92dbfe446d029abba9359b6eec47%40temporary-addon)
