@@ -60,7 +60,7 @@ for (const [ _date, bookmarks ] of bookmarksGroupedByDayEntries) {
     readme += `\n## ${year}-${month}-${day}\n`;
     for (const bookmark of bookmarks) {
         readme += `- [${bookmark.title || bookmark.url}](${bookmark.url})`;
-        if (bookmark.description) readme += ` - ${bookmark.description}`;
+        if (bookmark.description) readme += ` - ${bookmark.description.replace(/\n/g, ' ')}`;
         readme += '\n';
     }
 }
