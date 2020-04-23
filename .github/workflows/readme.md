@@ -1,6 +1,6 @@
 # Bookmarks
 
-## 2020-3-3
+## 2020-03-03
 - [https://example.com](https://example.com)
 - [https://example.com/foo](https://example.com/foo)
 - [tabs.query() - Mozilla | MDN](https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
