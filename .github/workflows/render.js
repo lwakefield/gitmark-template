@@ -1,8 +1,6 @@
 const fs = require('fs');
 const cp = require('child_process');
 
-console.log(process.env);
-
 function getLines (str) {
     return str.toString()
         .split('\n')
@@ -69,9 +67,11 @@ for (const [ _date, bookmarks ] of bookmarksGroupedByDayEntries) {
 
 fs.writeFileSync('readme.md', readme);
 
-cp.execSync('git config --local user.name $GITHUB_ACTOR')
-// cp.execSync('git config --local user.email $GITHUB_ACTOR@example.com')
+const [ , user ] = getLines(cp.execSync('git log -1 --format=email'));
+const [ , name, email ] = user.match(/From: (.+) <(.+)>/)
+
+cp.execSync(`git config --local user.name "${name}"`)
+cp.execSync(`git config --local user.email "${email}"`)
 cp.execSync(`git add readme.md`);
 cp.execSync(`git commit -m "Rendered readme.md"`);
-// cp.execSync(`git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git`);
 cp.execSync(`git push origin master`);
