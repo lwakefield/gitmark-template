@@ -1,5 +1,8 @@
 # Bookmarks
 
+## 2020-03-24
+- [gitmark.lwakefield.now.sh/](https://gitmark.lwakefield.now.sh)
+
 ## 2020-03-23
 - [https://example.com](https://example.com)
 - [https://example.com/foo](https://example.com/foo)
