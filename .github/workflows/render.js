@@ -8,16 +8,13 @@ function getLines (str) {
         .filter(v => v !== '');
 }
 
-const srcFiles = [];
-srcFiles.push(...getLines(cp.execSync('ls bookmarks.jsonl')));
-try {
-    srcFiles.push(...getLines(cp.execSync('ls bookmarks.*.jsonl')));
-} catch (e) { /* bookmarks.*.jsonl may not exist*/}
+const srcFiles = fs.readdirSync('bookmarks')
+    .filter(v => v.endsWith('.jsonl'));
 
 const bookmarks = [];
 
 for (const srcFile of srcFiles) {
-    const lines = fs.readFileSync(srcFile)
+    const lines = fs.readFileSync('bookmarks/' + srcFile)
         .toString()
         .split('\n')
         .map(v => v.trim())
